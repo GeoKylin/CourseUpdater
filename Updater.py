@@ -200,9 +200,7 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
             r = session.get(url)  # 当前课程
             url = r.html.find('a.Mrphs-toolsNav__menuitem--link')[3].attrs.get('href')  # 左侧菜单栏 第4个”资源“
             print("\n===== %s =====" % c[1])
-            flag = self.get_class(c[1], url, None, False)
-            if flag:
-                print('yes')
+            if self.get_class(c[1], url, None, False):
                 self.model.item(row, 1).setForeground(QtGui.QBrush(QtGui.QColor(53, 116, 245)))
                 self.class_state[c[1]][1] = True
                 have_new_class_num += 1
