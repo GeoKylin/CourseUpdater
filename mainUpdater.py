@@ -9,6 +9,7 @@
 # Updates: 2019/03/21 - V1.0, build and comment
 
 import sys
+import platform
 import os
 import re
 import pickle
@@ -21,6 +22,7 @@ from LoginGUI import Ui_Login
 from DialogGUI import Ui_Dialog
 
 session = HTMLSession()
+is_init = False
 user_info = {'remember_user': True,
              'auto_login': True,
              'user_id': 'userId',
@@ -36,7 +38,6 @@ class LoginMain(QtWidgets.QWidget, Ui_Login):
     def __init__(self):
         super(LoginMain, self).__init__()
         self.setupUi(self)
-        self.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)
         self.setFixedSize(self.width(), self.height())
         self.check_remember.setChecked(user_info['remember_user'])
         self.check_auto.setChecked(user_info['auto_login'])
@@ -113,7 +114,6 @@ class DialogMain(QtWidgets.QWidget, Ui_Dialog):
     def __init__(self, title='', message='', height=0):
         super(DialogMain, self).__init__()
         self.setupUi(self)
-        self.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)
         if title:
             self.setWindowTitle(title)
         if message:
@@ -130,8 +130,8 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
     def __init__(self):
         super(UpdaterMain, self).__init__()
         self.setupUi(self)
-        self.setWindowFlags(QtCore.Qt.WindowMinimizeButtonHint)
         self.setFixedSize(self.width(), self.height())
+        self.str_path = ['/', '\\'][platform.system() == 'Windows']
         self.update_file = {}
         self.class_list = []
         self.class_state = {}
@@ -177,7 +177,7 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
                         first_group = key
                     sort_class.append(class_info)
                     item_checked = QtGui.QStandardItem()
-                    if not user_info['remember_select']:
+                    if not user_info['remember_select'] or is_init:
                         item_checked.setCheckState([QtCore.Qt.Unchecked, QtCore.Qt.Checked][key == first_group])
                     elif class_info[1] in user_info['select_course']:
                         item_checked.setCheckState(QtCore.Qt.Checked)
@@ -281,9 +281,9 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
         if os.path.exists(file):
             return False
         else:
-            c_path = os.path.join(class_name, file_name).split('/')
+            c_path = os.path.join(class_name, file_name).split(self.str_path)
             c_name = c_path[0]
-            c_dir = '/'.join(c_path[1:])
+            c_dir = self.str_path.join(c_path[1:])
             self.update_file[c_name].append(c_dir)
         if download_or_not:
             print('正在下载 %s...' % file)
@@ -406,7 +406,7 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
             last_tree = []
             for file in class_files:
                 path = root
-                file_tree = file.split('/')
+                file_tree = file.split(self.str_path)
                 for index, file_dir in enumerate(file_tree):
                     if index < len(last_tree)-1 and file_dir == last_tree[index]:
                         path = path.child(path.childCount()-1)
@@ -433,10 +433,11 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
 
 
 def read_info():
-    global user_info
+    global user_info, is_init
     if not os.path.exists(info_file):
         with open(info_file, 'wb') as file:
             pickle.dump(user_info, file, -1)
+        is_init = True
     else:
         with open(info_file, 'rb') as file:
             user_info = pickle.load(file)
