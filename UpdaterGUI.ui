@@ -1,0 +1,999 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QWidget" name="Main">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>954</width>
+    <height>604</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Ucas Course Auto Updater</string>
+  </property>
+  <widget class="QLabel" name="label_hello">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>30</y>
+     <width>400</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="whatsThis">
+    <string/>
+   </property>
+   <property name="text">
+    <string>欢迎您！xxxxxx xxx</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_exit">
+   <property name="geometry">
+    <rect>
+     <x>870</x>
+     <y>30</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>232</red>
+         <green>69</green>
+         <blue>68</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color: rgb(255, 255, 255)}
+QPushButton{background-color: rgb(232, 69, 68)}
+QPushButton:pressed{color: rgb(232, 69, 68)}
+QPushButton:pressed{background-color: rgb(255, 255, 255)}
+QPushButton{border-radius:10px}</string>
+   </property>
+   <property name="text">
+    <string>注销</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edit_search">
+   <property name="geometry">
+    <rect>
+     <x>142</x>
+     <y>74</y>
+     <width>121</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 5px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(167, 167, 167);</string>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="inputMask">
+    <string/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>课程关键字</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_search">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>70</y>
+     <width>61</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>搜索</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="select_term">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>全部学期</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>夏季学期</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>春季学期</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>秋季学期</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLineEdit" name="edit_path">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>74</y>
+     <width>261</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 5px;
+border-width: 1px;
+border-style: solid;
+border-color: rgb(167, 167, 167);</string>
+   </property>
+   <property name="placeholderText">
+    <string>课件保存位置</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_path">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>70</y>
+     <width>91</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>选择路径</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="list_course">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>391</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="editTriggers">
+    <set>QAbstractItemView::NoEditTriggers</set>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <property name="selectionMode">
+    <enum>QAbstractItemView::SingleSelection</enum>
+   </property>
+   <property name="showGrid">
+    <bool>false</bool>
+   </property>
+   <attribute name="horizontalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderCascadingSectionResizes">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>0</number>
+   </attribute>
+   <attribute name="horizontalHeaderMinimumSectionSize">
+    <number>0</number>
+   </attribute>
+   <attribute name="horizontalHeaderStretchLastSection">
+    <bool>true</bool>
+   </attribute>
+   <attribute name="verticalHeaderVisible">
+    <bool>false</bool>
+   </attribute>
+   <attribute name="verticalHeaderHighlightSections">
+    <bool>true</bool>
+   </attribute>
+  </widget>
+  <widget class="QTreeWidget" name="tree_update">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>140</y>
+     <width>391</width>
+     <height>441</height>
+    </rect>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAsNeeded</enum>
+   </property>
+   <property name="alternatingRowColors">
+    <bool>true</bool>
+   </property>
+   <attribute name="headerVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QCheckBox" name="check_all">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>140</y>
+     <width>61</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>全选</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_course">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>120</y>
+     <width>221</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;已选 x 门课程，&lt;span style=&quot; color:#3574f5;&quot;&gt;有 x 门更新：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::RichText</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_new">
+   <property name="geometry">
+    <rect>
+     <x>420</x>
+     <y>120</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>有更新的课件：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_update">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>440</y>
+     <width>115</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color: rgb(255, 255, 255)}
+QPushButton{background-color: rgb(48, 112, 245)}
+QPushButton:pressed{color: rgb(48, 112, 245)}
+QPushButton:pressed{background-color: rgb(255, 255, 255)}
+QPushButton{border-radius:10px}</string>
+   </property>
+   <property name="text">
+    <string>更新 (Enter)</string>
+   </property>
+   <property name="shortcut">
+    <string>Return</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_update_all">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>480</y>
+     <width>115</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color: rgb(0, 0, 0)}
+QPushButton{background-color: rgb(255, 255, 255)}
+QPushButton:pressed{color: rgb(255, 255, 255)}
+QPushButton:pressed{background-color: rgb(48, 112, 245)}
+QPushButton{border-radius:10px}
+QPushButton{border-style:solid}
+QPushButton{border-width:1px}
+QPushButton{border-color: rgb(167, 167, 167)}</string>
+   </property>
+   <property name="text">
+    <string>全部更新</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="check_remember">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>170</y>
+     <width>87</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>记住勾选</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_credit">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>550</y>
+     <width>115</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color: rgb(0, 0, 0)}
+QPushButton{background-color: rgb(255, 255, 255)}
+QPushButton:pressed{color: rgb(255, 255, 255)}
+QPushButton:pressed{background-color: rgb(48, 112, 245)}
+QPushButton{border-radius:10px}
+QPushButton{border-style:solid}
+QPushButton{border-width:1px}
+QPushButton{border-color: rgb(167, 167, 167)}</string>
+   </property>
+   <property name="text">
+    <string>学分统计</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_about">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>30</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="WindowText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Button">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Text">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="ButtonText">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>0</red>
+         <green>0</green>
+         <blue>0</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{color: rgb(0, 0, 0)}
+QPushButton{background-color: rgb(255, 255, 255)}
+QPushButton:pressed{color: rgb(255, 255, 255)}
+QPushButton:pressed{background-color: rgb(48, 112, 245)}
+QPushButton{border-radius:10px}
+QPushButton{border-style:solid}
+QPushButton{border-width:1px}
+QPushButton{border-color: rgb(167, 167, 167)}</string>
+   </property>
+   <property name="text">
+    <string>关于</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="button_reset">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>70</y>
+     <width>91</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>PointingHandCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string>显示全部</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>button_about</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_about_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>573</x>
+     <y>39</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>555</x>
+     <y>38</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_exit</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_exit_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>646</x>
+     <y>42</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>683</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_path</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_path_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>608</x>
+     <y>92</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>659</x>
+     <y>117</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_credit</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_credit_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>844</x>
+     <y>484</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>509</x>
+     <y>524</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_update</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_update_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>847</x>
+     <y>369</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>546</x>
+     <y>296</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_update_all</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_update_all_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>905</x>
+     <y>409</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>642</x>
+     <y>543</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_course</sender>
+   <signal>clicked(QModelIndex)</signal>
+   <receiver>Main</receiver>
+   <slot>list_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>212</x>
+     <y>262</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>288</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_search</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_search_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>325</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>366</x>
+     <y>85</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>select_term</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>Main</receiver>
+   <slot>combo_term_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>84</x>
+     <y>86</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>53</x>
+     <y>27</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>check_all</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>Main</receiver>
+   <slot>select_all_changed()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>823</x>
+     <y>157</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>857</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_reset</sender>
+   <signal>clicked()</signal>
+   <receiver>Main</receiver>
+   <slot>button_reset_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>262</x>
+     <y>29</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>button_about_click()</slot>
+  <slot>button_exit_click()</slot>
+  <slot>button_search_click()</slot>
+  <slot>button_path_click()</slot>
+  <slot>button_credit_click()</slot>
+  <slot>button_update_click()</slot>
+  <slot>button_update_all_click()</slot>
+  <slot>list_click()</slot>
+  <slot>combo_term_changed()</slot>
+  <slot>select_all_changed()</slot>
+  <slot>button_reset_click()</slot>
+ </slots>
+</ui>
