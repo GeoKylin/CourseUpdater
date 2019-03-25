@@ -23,6 +23,7 @@ from DialogGUI import Ui_Dialog
 
 session = HTMLSession()
 is_init = False
+str_path = ['/', '\\'][platform.system() == 'Windows']
 user_info = {'remember_user': True,
              'auto_login': True,
              'user_id': 'userId',
@@ -131,13 +132,12 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
         super(UpdaterMain, self).__init__()
         self.setupUi(self)
         self.setFixedSize(self.width(), self.height())
-        self.str_path = ['/', '\\'][platform.system() == 'Windows']
         self.update_file = {}
         self.class_list = []
         self.class_state = {}
         self.label_hello.setText('欢迎您！%s，%s' % (user_info['org'], user_info['name']))
         if not user_info['file_path']:
-            user_info['file_path'] = os.getcwd()
+            user_info['file_path'] = [os.getcwd(), ''][platform.system() != 'Windows' and platform.system() != 'Linux']
         self.edit_path.setText(user_info['file_path'])
         self.check_remember.setChecked(user_info['remember_select'])
         self.model = QtGui.QStandardItemModel()
@@ -281,9 +281,9 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
         if os.path.exists(file):
             return False
         else:
-            c_path = os.path.join(class_name, file_name).split(self.str_path)
+            c_path = os.path.join(class_name, file_name).split(str_path)
             c_name = c_path[0]
-            c_dir = self.str_path.join(c_path[1:])
+            c_dir = str_path.join(c_path[1:])
             self.update_file[c_name].append(c_dir)
         if download_or_not:
             print('正在下载 %s...' % file)
@@ -382,13 +382,16 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
             self.button_update_main(self.class_list)
 
     def button_update_main(self, c_list):
-        for c in c_list:
-            url = c[2]
-            r = session.get(url)  # 当前课程
-            url = r.html.find('a.Mrphs-toolsNav__menuitem--link')[3].attrs.get('href')  # 左侧菜单栏 第4个”资源“
-            print("\n===== %s =====" % c[1])
-            self.get_class(c[1], url, None)
-        self.dialog = DialogMain('成功', '课件更新完毕！')
+        if user_info['file_path']:
+            for c in c_list:
+                url = c[2]
+                r = session.get(url)  # 当前课程
+                url = r.html.find('a.Mrphs-toolsNav__menuitem--link')[3].attrs.get('href')  # 左侧菜单栏 第4个”资源“
+                print("\n===== %s =====" % c[1])
+                self.get_class(c[1], url, None)
+            self.dialog = DialogMain('成功', '课件更新完毕！')
+        else:
+            self.dialog = DialogMain('警告', '请选择课件存放路径！')
         self.dialog.show()
 
     def button_credit_click(self):
@@ -406,7 +409,7 @@ class UpdaterMain(QtWidgets.QWidget, Ui_Main):
             last_tree = []
             for file in class_files:
                 path = root
-                file_tree = file.split(self.str_path)
+                file_tree = file.split(str_path)
                 for index, file_dir in enumerate(file_tree):
                     if index < len(last_tree)-1 and file_dir == last_tree[index]:
                         path = path.child(path.childCount()-1)
@@ -450,7 +453,8 @@ def save_info():
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
-    info_file = os.path.join(os.getcwd(), 'user.info')
+    current_dir = str_path.join(sys.argv[0].split(str_path)[:-1])
+    info_file = os.path.join(current_dir, 'user.info')
     read_info()
     window_main = LoginMain()
     window_main.show()

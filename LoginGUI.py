@@ -13,9 +13,12 @@ class Ui_Login(object):
     def setupUi(self, Login):
         Login.setObjectName("Login")
         Login.resize(293, 390)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/image/mainUpdater.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Login.setWindowIcon(icon)
         self.logo = QtWidgets.QLabel(Login)
         self.logo.setGeometry(QtCore.QRect(80, 50, 141, 121))
-        self.logo.setStyleSheet("image: url(:/image/Updater.png);")
+        self.logo.setStyleSheet("image: url(:/image/mainUpdater.png);")
         self.logo.setText("")
         self.logo.setObjectName("logo")
         self.label_username = QtWidgets.QLabel(Login)

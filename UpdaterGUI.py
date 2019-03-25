@@ -19,6 +19,9 @@ class Ui_Main(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(Main.sizePolicy().hasHeightForWidth())
         Main.setSizePolicy(sizePolicy)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/image/mainUpdater.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Main.setWindowIcon(icon)
         self.label_hello = QtWidgets.QLabel(Main)
         self.label_hello.setGeometry(QtCore.QRect(280, 30, 400, 16))
         font = QtGui.QFont()
@@ -119,6 +122,7 @@ class Ui_Main(object):
         self.select_term.addItem("")
         self.select_term.addItem("")
         self.edit_path = QtWidgets.QLineEdit(Main)
+        self.edit_path.setEnabled(False)
         self.edit_path.setGeometry(QtCore.QRect(440, 74, 261, 21))
         self.edit_path.setStyleSheet("border-radius: 5px;\n"
 "border-width: 1px;\n"
@@ -316,3 +320,4 @@ class Ui_Main(object):
         self.button_reset.setText(_translate("Main", "显示全部"))
 
 
+import resource_rc

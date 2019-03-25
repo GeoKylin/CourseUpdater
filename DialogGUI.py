@@ -13,6 +13,9 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(400, 120)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/image/mainUpdater.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Dialog.setWindowIcon(icon)
         self.label_message = QtWidgets.QLabel(Dialog)
         self.label_message.setGeometry(QtCore.QRect(20, 20, 360, 60))
         self.label_message.setLineWidth(1)
@@ -41,3 +44,4 @@ class Ui_Dialog(object):
         self.button_ok.setShortcut(_translate("Dialog", "Return"))
 
 
+import resource_rc
